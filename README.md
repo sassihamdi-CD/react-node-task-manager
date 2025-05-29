@@ -1,88 +1,50 @@
 
-# 🚀 Task Management (MERN Stack test)  
+# TaskFlow - MERN Stack Task Management Application
 
-## 🛠 Installation & Setup  
+## Project Overview
+This project is an implementation of the TaskFlow test, a MERN stack task management application with authentication, task management, filtering, and administrative features.
 
-### 1️⃣ Clone the Repository  
-```sh
-git clone https://github.com/baymaxfpo/taskflow-test.git 
-cd taskflow
-```
+## Features Implemented
 
-### 2️⃣ Install Dependencies  
+### 1. Task List in Navbar
+- Displays tasks with title, description, and status in a dropdown from the navbar
+- Allows marking tasks as complete or incomplete
+- Provides task editing functionality
+- Implements localStorage for persistent data storage
 
-#### 📌 Frontend  
-```sh
-npm install
-```
+### 2. Authentication System
+- Login/Register pages before accessing the main application
+- Role-based access control (admin/user)
+- Protected routes that require authentication
+- Persistent user sessions with localStorage
 
-#### 📌 Backend  
-```sh
-cd server
-npm install
-```
+### 3. Task Filtering
+- Filter tasks by completion status (All/Complete/Incomplete)
+- Search functionality to filter tasks by title
+- Real-time filtering as users type or select options
+- Responsive design for all screen sizes
 
-### 3️⃣ Setup Environment Variables  
-Create a **.env** file inside the `/server` folder and add:  
-```
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_password
-```
+### 4. User Log Page for Admin
+- Comprehensive display of user activity logs
+- Shows login time, logout time, JWT token, username, role, and IP address
+- Delete functionality for admin users
+- Sorting and filtering capabilities
 
-### 4️⃣ Start the Application  
+## Technologies Used
+- **Frontend**: React, React Router, TailwindCSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Authentication**: JWT-based authentication
+- **State Management**: React Context API and localStorage
 
-#### 🚀 Start Backend Server  
-```sh
-for local environment
-cd server
-node src/index.js
-backend deployed on render
-```
+## Installation & Setup
 
-#### 🚀 Start Frontend Development Server  
-```sh
-npm run dev
-```
----
+### Prerequisites
+- Node.js v20.0.0 or higher
+- MongoDB
 
-## Submission Instructions
-
-1. **Clone the Repository Locally**:
-   - Clone the repository to your local machine:
-     ```bash
-     git clone https://github.com/YOUR_USERNAME/react-node-task-manager.git
-     ```
-2. **Complete the Task**:
-
-  ## Test Problems (60 ~ 90mins)
-  ## ⚡ Task 1 - Add Task List on the Nav bar
-  - Display a list of tasks, showing task title, description, and status (e.g., "Incomplete" or "Complete").
-  - Option to mark a task as complete or edit the task.
-
-  ## ⚡ Task 2 - Display Login/Register page on before the landing page
-  - Users are should to login first to access the full list of tabs.
-    When they're logged out, only Dashboard panel should to be displayed.
-  - Option to mark a task as complete or edit the task.
-
-  ## ⚡ Task 3 - Task Filter
-  - Allow users to filter tasks based on their completion status (e.g., show only completed or incomplete tasks).
-  - Optional: Add a search feature to filter tasks by title.
-
-  ## ⚡ Task 4 - Add User Log page on the Admin page
-  - Display the user logs(login time, logout time, JWT token name, user name, role, ip address)
-  - The user logs could be deleted by admin action - DELETE
-
-3. **Commit Your Changes**:
-   - Make sure you commit your changes regularly:
-     ```bash
-     git add .
-     git commit -m "Task1 completed!"
-     git push origin main
-     ```
-
-4. **Submit Your Repository Link**:
-   - Once you’ve completed the tasks, send the result to https://forms.gle/1E2z5713vGV9vhr4A.
-   - Please make sure that your repository is **public** or share access if it's private.
+### Setup Steps
+1. Clone the repository
+```bash
+git clone https://github.com/YOUR_USERNAME/react-node-task-manager.git
+cd react-node-task-manager
